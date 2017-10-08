@@ -1,1 +1,8 @@
-{% blo %}
+{% block content %}
+{{ contents }}
+{% endblock %}
+
+
+--------------------------
+
+Ini adalah footer
