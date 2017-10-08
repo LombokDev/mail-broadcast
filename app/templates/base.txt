@@ -2,7 +2,5 @@
 {{ contents }}
 {% endblock %}
 
-
 --------------------------
-
 Ini adalah footer

@@ -1,0 +1,7 @@
+{% extends "base.txt" %}
+
+{% block content %}
+Hallo {{ name }}
+
+{{ contents }}
+{% endblock %}

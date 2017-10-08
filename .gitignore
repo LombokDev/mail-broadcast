@@ -53,4 +53,5 @@ ENV/
 .spyderproject
 .ropeproject
 /.idea
-/.vscodepass
+/.vscode
+pass
