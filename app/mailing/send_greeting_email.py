@@ -1,7 +1,7 @@
 import signal
 import multitasking
 from mailer import Mailer, EMAIL
-from logger import no_recipient, mail_unsent
+from logger import no_recipient, mail_unsent, log
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from startup import env
@@ -33,6 +33,7 @@ def send_greeting_email(subject, contents, recipients=list()):
         msg.attach(body)
         try:
             print 'Sending greeting email to %s' % email
+            log.info('Sending greeting email to %s' % email)
             mailer.server.sendmail(msg.get('From'), email, msg.as_string())
         except Exception:
             mail_unsent(email)
