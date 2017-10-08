@@ -6,7 +6,7 @@ Before running the script setup your google mail credentials in `settings.py`
 
 ## Usage
 #### Required params:
-- `-i` - To specify input csv file that contains emails, names of recipients. Example `Downloads/google-form.csv`
+- `-i` - To specify input csv file that contains emails, names of recipients. Example `-i Downloads/google-form.csv`
 - `-c` - To specify file name that contains your email contents. This file must be place inside `app/templates/emails` folder. Example `-c xemail1.txt`
 
 #### Flags
