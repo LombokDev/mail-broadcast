@@ -1,7 +1,7 @@
 {% extends "base.txt" %}
 
 {% block content %}
-Hallo {{ name }}
+Hallo {{ name }}, semoga hari anda menyenangkan!
 
 {{ contents }}
 {% endblock %}

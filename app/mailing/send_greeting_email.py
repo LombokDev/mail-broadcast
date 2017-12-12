@@ -19,17 +19,19 @@ def send_greeting_email(subject, contents, recipients=list()):
         no_recipient()
         return
 
-    mailer = Mailer()
-    msg = MIMEMultipart('alternative')
-    msg['Subject'] = subject
-    msg['From'] = EMAIL
-
     for email, name in recipients:
+        # 1 email for 1 recipient
+        mailer = Mailer()
+        msg = MIMEMultipart('alternative')
+        msg['Subject'] = subject
+        msg['From'] = EMAIL
         msg['To'] = email
 
         greet_name_template = env.get_template('greetname.txt')
-        
-        body = MIMEText(greet_name_template.render(contents=contents, name=name), 'plain')
+
+        body = MIMEText(
+            greet_name_template.render(contents=contents, name=name.title()),
+            'plain')
         msg.attach(body)
         try:
             print 'Sending greeting email to %s' % email
