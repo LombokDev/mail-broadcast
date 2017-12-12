@@ -19,9 +19,10 @@ def send_greeting_email(subject, contents, recipients=list()):
         no_recipient()
         return
 
-    mailer = Mailer() #instance one smtp for given email credentials
+    #instance one smtp for given email credentials
+    mailer = Mailer()
     for email, name in recipients:
-        # 1 email for 1 recipient
+        # 1 email msg for 1 recipient
         msg = MIMEMultipart('alternative')
         msg['Subject'] = subject
         msg['From'] = EMAIL
