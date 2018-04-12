@@ -16,7 +16,7 @@ def main():
   parser.add_argument('-s', '--subject', help='Spesify subject', default='Berita')
   parser.add_argument('-c', '--content', help='Specify "file name" which contains email content that stored inside "app/templates/emails"', required=1)
   parser.add_argument('-ecp','--email_column_position', type=int, help='Specify position of email column in csv input file, default is 2 since first column usually for timestamps in google form. This is required if your email position is other than 2. \n*Note column starts from 1', default=2)
-  parser.add_argument('-ncp', '--name_column_position', type=int, help='Specify position of email column in csv input file, default is 3. This is required if you use name greeting template. \n*Note column starts from 1', default=3)
+  parser.add_argument('-ncp', '--name_column_position', type=int, help='Specify position of name column in csv input file, default is 3. This is required if you use name greeting template. \n*Note column starts from 1', default=3)
   parser.add_argument('-sfr', '--skip_first_row', help='Usually first row is only header column, spesify this flag if you want to skip first row', action='store_true', default=True)
   
   args = parser.parse_args()
@@ -37,10 +37,10 @@ def main():
     recipients = recipients[1:]
 
   if args.greeting:
-    print 'Sending greeting email'
+    print('Sending greeting email')
     send_greeting_email(subject, content, recipients)
   else:
-    print 'Sending general email'
+    print('Sending general email')
     send_general_email(subject, content, map(lambda item: item[0], recipients))
 
 if __name__ == '__main__':
