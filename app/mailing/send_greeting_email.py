@@ -1,6 +1,6 @@
 import signal
 import multitasking
-from mailer import Mailer, EMAIL
+from .mailer import Mailer, EMAIL
 from logger import no_recipient, mail_unsent, log
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart

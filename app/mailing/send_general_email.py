@@ -1,4 +1,4 @@
-from mailer import Mailer, EMAIL
+from .mailer import Mailer, EMAIL
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from logger import no_recipient
