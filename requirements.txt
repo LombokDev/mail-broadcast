@@ -5,7 +5,7 @@ backports.shutil-get-terminal-size==1.0.0
 configparser==3.5.0
 decorator==4.1.2
 enum34==1.1.6
-ipython==5.5.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 isort==4.2.15
 Jinja2==2.9.6
